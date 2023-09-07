@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Enemy
+  - Player
+  - Loot
   - 
   - 
   - 
@@ -42,17 +42,14 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: BG
-    uniqueID: 15900599
+    uniqueID: 985546761
     locked: 0
-  - name: WALL
-    uniqueID: 1812659505
+  - name: Enemy
+    uniqueID: 2029390385
     locked: 0
-  - name: ENEMY
-    uniqueID: 1373989591
+  - name: Loot
+    uniqueID: 3335468259
     locked: 0
-  - name: LOOT
-    uniqueID: 3063723729
-    locked: 0
-  - name: PLAYER
-    uniqueID: 3840812971
+  - name: Player
+    uniqueID: 1890750833
     locked: 0
