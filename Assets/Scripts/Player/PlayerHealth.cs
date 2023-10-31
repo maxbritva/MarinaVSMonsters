@@ -7,6 +7,7 @@ namespace Player
 {
     public class PlayerHealth : ObjectHealth
     {
+        public Action OnHealthChanged;
         private WaitForSeconds _regenerationInterval = new WaitForSeconds(5f);
         private float _regeneration = 1f;
 
@@ -17,6 +18,7 @@ namespace Player
             _currentHealth += 30;
             if (_currentHealth > _maxHealth)
                 _currentHealth = _maxHealth;
+            OnHealthChanged?.Invoke();
         }
         public override void TakeDamage(float damage)
         {
@@ -31,6 +33,7 @@ namespace Player
             {
                 if (_currentHealth < _maxHealth)
                     _currentHealth += _regeneration;
+                OnHealthChanged?.Invoke();
                 yield return _regenerationInterval;
             }
         }

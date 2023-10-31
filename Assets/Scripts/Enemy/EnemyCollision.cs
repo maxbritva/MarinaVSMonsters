@@ -13,6 +13,7 @@ namespace Enemy
             {
                 if(playerHealth == null) return;
                 playerHealth.TakeDamage(_damage);
+                playerHealth.OnHealthChanged?.Invoke();
                 gameObject.SetActive(false);
             }
         }
