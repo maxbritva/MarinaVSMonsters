@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 9164145081320405275}
   - component: {fileID: 780237199036340830}
-  m_Layer: 0
+  - component: {fileID: 2653736147329830219}
+  - component: {fileID: 2132289206813094861}
+  - component: {fileID: 4693127101028570177}
+  m_Layer: 7
   m_Name: Bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,8 +48,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b729fe3fe3844259f73648fc874cf66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 9062468446117121188}
+  _freezeTimer: 2
   _moveSpeed: 2
-  _animator: {fileID: 0}
+--- !u!114 &2653736147329830219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183644055559650592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 862949274e244b0888cec2aa68098ef9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 5
+--- !u!114 &2132289206813094861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183644055559650592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7b325ca4c04b94b6acce9251d2eddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 3
+  _currentHealth: 0
+--- !u!58 &4693127101028570177
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183644055559650592}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09}
+  serializedVersion: 2
+  m_Radius: 0.21
 --- !u!1 &5948808317196154062
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +124,7 @@ GameObject:
   - component: {fileID: 7077398576554678067}
   - component: {fileID: 6379079471469047521}
   - component: {fileID: 9062468446117121188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
