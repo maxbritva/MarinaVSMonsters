@@ -21,7 +21,7 @@ namespace Player.Weapons
         private void Awake() => _container.Inject(this);
         protected virtual void Start() => SetStats(0);
 
-        protected void OnTriggerEnter2D(Collider2D other)
+        protected virtual void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.TryGetComponent(out EnemyHealth enemyHealth))
             {
