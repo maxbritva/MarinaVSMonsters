@@ -172,7 +172,7 @@ MonoBehaviour:
   _weaponStats:
   - _speed: 1
     _damage: 2
-    _range: 3
+    _range: 5
     _timeBetweenAttack: 1
     _duration: 1
   - _speed: 1
@@ -213,6 +213,7 @@ MonoBehaviour:
   _damage: 1
   _range: 1
   _targetContainer: {fileID: 1304515276}
+  _collider2D: {fileID: 59180172}
 --- !u!58 &59180172
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -356,6 +357,7 @@ Transform:
   - {fileID: 1500468696}
   - {fileID: 1874827561}
   - {fileID: 1981657960}
+  - {fileID: 1170791109}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &312484884
@@ -703,6 +705,7 @@ Transform:
   m_Children:
   - {fileID: 843518499}
   - {fileID: 59180170}
+  - {fileID: 1670275304}
   m_Father: {fileID: 1622311673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &843518498
@@ -723,7 +726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &843518499
 Transform:
   m_ObjectHideFlags: 0
@@ -1170,6 +1173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerController: {fileID: 1622311672}
   _playerHealth: {fileID: 1622311674}
+  _surikenWeapon: {fileID: 1670275303}
   _randomSpawnPoint: {fileID: 312484884}
 --- !u!114 &1152776458
 MonoBehaviour:
@@ -1217,6 +1221,38 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1170791108
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1170791109}
+  m_Layer: 0
+  m_Name: Weapons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1170791109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170791108}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2026520395}
+  m_Father: {fileID: 312484883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170908594
 GameObject:
@@ -102741,6 +102777,97 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!1 &1670275302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670275304}
+  - component: {fileID: 1670275303}
+  m_Layer: 8
+  m_Name: SurikenWeapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1670275303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670275302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c395fa4f8a444db13ef98f49488294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weaponStats:
+  - _speed: 4
+    _damage: 4
+    _range: 4
+    _timeBetweenAttack: 2
+    _duration: 1
+  - _speed: 4.5
+    _damage: 6
+    _range: 5
+    _timeBetweenAttack: 1.9
+    _duration: 1.2
+  - _speed: 5
+    _damage: 7
+    _range: 6
+    _timeBetweenAttack: 1.8
+    _duration: 1.3
+  - _speed: 5.5
+    _damage: 9
+    _range: 7
+    _timeBetweenAttack: 1.6
+    _duration: 1.4
+  - _speed: 8
+    _damage: 14
+    _range: 9
+    _timeBetweenAttack: 1.3
+    _duration: 1.6
+  - _speed: 8
+    _damage: 16
+    _range: 10
+    _timeBetweenAttack: 1.1
+    _duration: 1.6
+  - _speed: 8
+    _damage: 17
+    _range: 10
+    _timeBetweenAttack: 1.1
+    _duration: 1.6
+  - _speed: 9
+    _damage: 20
+    _range: 11
+    _timeBetweenAttack: 1
+    _duration: 1.6
+  _damage: 1
+  _objectPool: {fileID: 2026520396}
+  _container: {fileID: 2026520395}
+  _mask:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!4 &1670275304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670275302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 718943961}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1705832543
 GameObject:
   m_ObjectHideFlags: 0
@@ -103367,6 +103494,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 312484883}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2026520394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026520395}
+  - component: {fileID: 2026520396}
+  m_Layer: 0
+  m_Name: SurikenContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2026520395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026520394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1170791109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2026520396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026520394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960be578deab4c7b908e7788ef1f31e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 1321974180158811756, guid: 4f4acf6fb1f138f4c986520c9000e4a4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
