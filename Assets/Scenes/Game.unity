@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &59180170
 Transform:
   m_ObjectHideFlags: 0
@@ -102847,7 +102847,7 @@ MonoBehaviour:
     _range: 11
     _timeBetweenAttack: 1
     _duration: 1.6
-  _damage: 1
+  _damage: 5
   _objectPool: {fileID: 2026520396}
   _container: {fileID: 2026520395}
   _mask:
