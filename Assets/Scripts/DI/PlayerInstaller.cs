@@ -2,6 +2,7 @@
 using Player;
 using Player.Weapons.FrozenBolt;
 using Player.Weapons.Suriken;
+using Player.Weapons.Trap;
 using UnityEngine;
 using Zenject;
 
@@ -13,6 +14,7 @@ namespace DI
 		[SerializeField] private PlayerHealth _playerHealth;
 		[SerializeField] private SurikenWeapon _surikenWeapon;
 		[SerializeField] private FrozenBoltWeapon _frozenBoltWeapon;
+		[SerializeField] private TrapWeapon _trapWeapon;
 		[SerializeField] private RandomSpawnPoint _randomSpawnPoint;
 		public override void InstallBindings()
 		{
@@ -21,6 +23,7 @@ namespace DI
 			Container.Bind<RandomSpawnPoint>().FromInstance(_randomSpawnPoint).AsSingle().NonLazy();
 			Container.Bind<SurikenWeapon>().FromInstance(_surikenWeapon).AsSingle().NonLazy();
 			Container.Bind<FrozenBoltWeapon>().FromInstance(_frozenBoltWeapon).AsSingle().NonLazy();
+			Container.Bind<TrapWeapon>().FromInstance(_trapWeapon).AsSingle().NonLazy();
 		}
 	}
 }
