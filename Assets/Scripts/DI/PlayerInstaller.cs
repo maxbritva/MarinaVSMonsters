@@ -17,12 +17,11 @@ namespace DI
 		[SerializeField] private FrozenBoltWeapon _frozenBoltWeapon;
 		[SerializeField] private TrapWeapon _trapWeapon;
 		[SerializeField] private BowWeapon _bowWeapon;
-		[SerializeField] private RandomSpawnPoint _randomSpawnPoint;
+		
 		public override void InstallBindings()
 		{
 			Container.Bind<PlayerController>().FromInstance(_playerController).AsSingle().NonLazy();
 			Container.Bind<PlayerHealth>().FromInstance(_playerHealth).AsSingle().NonLazy();
-			Container.Bind<RandomSpawnPoint>().FromInstance(_randomSpawnPoint).AsSingle().NonLazy();
 			Container.Bind<SurikenWeapon>().FromInstance(_surikenWeapon).AsSingle().NonLazy();
 			Container.Bind<FrozenBoltWeapon>().FromInstance(_frozenBoltWeapon).AsSingle().NonLazy();
 			Container.Bind<TrapWeapon>().FromInstance(_trapWeapon).AsSingle().NonLazy();
