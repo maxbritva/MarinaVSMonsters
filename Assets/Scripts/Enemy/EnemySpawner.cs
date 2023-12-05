@@ -19,11 +19,7 @@ namespace Enemy
         private WaitForSeconds _interval;
         private Coroutine _spawnCoroutine;
 
-        private void Start()
-        {
-            _interval = new WaitForSeconds(_timeToSpawn);
-            Activate();
-        }
+        private void Start() => _interval = new WaitForSeconds(_timeToSpawn);
 
         public void Activate() => _spawnCoroutine = StartCoroutine(Spawn());
 
