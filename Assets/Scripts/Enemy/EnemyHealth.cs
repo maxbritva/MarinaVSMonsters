@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using GameCore.ExperienceSystem;
 using GameCore.Health;
 using UI.Fx;
 using UnityEngine;
@@ -11,12 +12,15 @@ namespace Enemy
     {
         private WaitForSeconds _tick = new WaitForSeconds(0.5f);
         private DamageTextSpawner _damageTextSpawner;
+        private ExperienceSpawner _experienceSpawner;
         public override void TakeDamage(float damage)
         {
             base.TakeDamage(damage);
             _damageTextSpawner.Activate(transform, (int)damage);
             if(_currentHealth <= 0 == false) return;
             gameObject.SetActive(false);
+            if(Random.Range(1f,100f) <=33f)
+                _experienceSpawner.Spawn(transform.position);
         }
 
         public void Burn(float damage) => StartCoroutine(GetBurn(damage));
@@ -36,6 +40,10 @@ namespace Enemy
             }
         }
 
-        [Inject] private void Construct(DamageTextSpawner textSpawner) => _damageTextSpawner = textSpawner;
+        [Inject] private void Construct(DamageTextSpawner textSpawner, ExperienceSpawner experience)
+        {
+            _damageTextSpawner = textSpawner;
+            _experienceSpawner = experience;
+        }
     }
 }
